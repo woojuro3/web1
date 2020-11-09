@@ -3,7 +3,13 @@
 <head>
   <title>WEB1 - index</title>
   <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="colors.js">
+
+  </script>
+
 </head>
 
 <body>
@@ -22,34 +28,10 @@
   Not to be confused with the Internet.</p>
 </div>
 </div>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 <input type="button" value="night"
         onclick="
-        var target = document.querySelector('body');
-        if(this.value === 'night')
-        {
-        target.style.background = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'yellow';
-          i = i + 1; }
-        }
-        else
-        {target.style.background = 'white';
-        target.style.color = 'black';
-        this.value = 'night'
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'gray';
-          i = i + 1;}
-        }
+          NightDayHandler(this);
         ">
 
 </body>
